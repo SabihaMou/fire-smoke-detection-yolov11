@@ -7,7 +7,7 @@ This is my undergraduate thesis project (Bachelor of Engineering in Computer Sci
 Wuhan Institute of Technology, 2026; supervisor: Assoc. Prof. Xu Cheng).
 Thesis title: *Design and Implementation of a Fire Detection System Based on YOLOv11*.
 
-> **About this repository (please read).** The original working files of my thesis experiments
+> **About this repository (please read).** The re-implementation code was written with the help of an AI assistant (Claude); I reviewed it and studied how it works. The original working files of my thesis experiments
 > (trained weights and notebooks) were not kept after I submitted the thesis. This repository is a clean
 > re-implementation of the same pipeline (training, evaluation and the Streamlit app) using the settings
 > reported in the thesis. The **result figures and numbers below come from the experiments reported in my thesis**
@@ -38,24 +38,24 @@ The dataset belongs to its original authors and is not redistributed here.
 YOLOv11s gave the best accuracy and the fastest inference (23.8 ms per image), so it was chosen for the application.
 Fire (AP@50 about 0.95) was detected more reliably than smoke (about 0.89), because smoke is transparent, irregular and easily confused with fog and clouds.
 
-<p align="center"><img src="docs/figures/training_curves.png" width="800"><br><em>YOLOv11s training curves (100 epochs)</em></p>
+<p align="center"><img src="training_curves.png" width="800"><br><em>YOLOv11s training curves (100 epochs)</em></p>
 
 <p align="center">
-<img src="docs/figures/confusion_matrix.png" width="380">
-<img src="docs/figures/pr_curve.png" width="380"><br>
+<img src="confusion_matrix.png" width="380">
+<img src="pr_curve.png" width="380"><br>
 <em>Confusion matrix and precision-recall curve (YOLOv11s)</em></p>
 
 ## Application screenshots
 
 <p align="center">
-<img src="docs/figures/gui_image_detection.png" width="380">
-<img src="docs/figures/gui_video_detection.png" width="380">
+<img src="gui_image_detection.png" width="380">
+<img src="gui_video_detection.png" width="380">
 </p>
 
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/fire-smoke-detection-yolov11.git
+git clone https://github.com/SabihaMou/fire-smoke-detection-yolov11.git
 cd fire-smoke-detection-yolov11
 pip install -r requirements.txt
 ```
@@ -81,7 +81,7 @@ app.py          Streamlit interface (image / video / webcam)
 train.py        training script
 evaluate.py     precision, recall, mAP on the test split
 data.yaml       dataset configuration
-docs/           figures from the thesis, learning notes
+*.png          result figures and application screenshots (from the thesis)
 ```
 
 ## Limitations and future work
