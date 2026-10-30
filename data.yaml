@@ -1,0 +1,18 @@
+# Dataset configuration (YOLO format).
+# Dataset: "Fire & Smoke Dataset | Object Detection | YOLO" (Kaggle, azimjaan21)
+# https://www.kaggle.com/datasets/azimjaan21/fire-and-smoke-dataset-object-detection-yolo
+#
+# 1) Download and unzip the dataset into datasets/fire_smoke/
+# 2) IMPORTANT: open the dataset's own data.yaml and make sure the class order
+#    below matches it exactly (the order must match the numbers in the label files).
+#    Also adjust the three folder paths below to match the downloaded folders.
+
+path: datasets/fire_smoke
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: fire
+  1: smoke
+  2: other
